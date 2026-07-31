@@ -1,28 +1,49 @@
 ---
-import infusionImage from "../assets/professional-staff.jpg";
-import patientCareImage from "../assets/about-main.jpg";
-import staffImage from "../assets/team-professionals.jpg";
+import printingImage from "../assets/printing.png";
+import requestImage from "../assets/request.png";
+import adjustrepairImage from "../assets/adjustrepair.png";
+import donateImage from "../assets/donate.png";
+import volunteerImage from "../assets/volunteer.png";
+import fittingImage from "../assets/fitting.png";
 import Card from "./Card.astro";
 
 const services = [
   {
-    title: "In-Home Healthcare",
+    title: "3D Hand Printing",
     summary: "Medical treatments and infusions delivered in your home.",
-    image: infusionImage,
+    image: printingImage,
     link: "/services#professional-healthcare-services",
   },
   {
-    title: "Care Coordination",
+    title: "Fitting",
+    summary: "Multi-state licensed nurses delivering quality care.",
+    image: fittingImage,
+    link: "/services#our-staff",
+  },  
+  {
+    title: "Request a 3D Hand",
     summary: "Complete care management from intake to ongoing treatment.",
-    image: patientCareImage,
+    image: requestImage,
     link: "/services#our-patient-care",
   },
   {
-    title: "Licensed Professionals",
+    title: "Request Adjustment/Repair",
     summary: "Multi-state licensed nurses delivering quality care.",
-    image: staffImage,
+    image: adjustrepairImage,
     link: "/services#our-staff",
   },
+  {
+    title: "Donate",
+    summary: "Multi-state licensed nurses delivering quality care.",
+    image: donateImage,
+    link: "/services#our-staff",
+  },
+  {
+    title: "Volunteer",
+    summary: "Multi-state licensed nurses delivering quality care.",
+    image: volunteerImage,
+    link: "/services#our-staff",
+  },    
 ];
 ---
 
