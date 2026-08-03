@@ -26,14 +26,9 @@
       "icon": "clipboard"
     },
     {
-      "label": "Careers",
+      "label": "Volunteer",
       "href": "/careers",
-      "icon": "users"
-    },
-    {
-      "label": "Info",
-      "href": "/info",
-      "icon": "book"
+      "icon": "heart"
     }
   ],
   "cta": {
