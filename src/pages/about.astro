@@ -7,7 +7,7 @@ import founderImage from "../assets/founder.png";
 import engineerImage from "../assets/engineer.png";
 import prosthetistImage from "../assets/prosthetist.png";
 import { Image } from "astro:assets";
-
+import Heading from "../components/Heading.astro";
 import Icon from "../components/Icon.astro";
 ---
 
@@ -20,6 +20,29 @@ import Icon from "../components/Icon.astro";
       description=""
       image={aboutHeroImage}
     />
+
+      <!-- Mission Statement -->
+    <section>
+      <div class="container">
+        <div class="narrow mx-auto text-center space-y-6">
+          <Heading level="h2" align="center"> Our Mission </Heading>
+          <p class="text-lg lg:text-xl text-theme-text-secondary leading-relaxed">
+            It is commonly accepted that the potential for patient progress and
+            recovery are substantially improved when patients are surrounded by
+            their native environment. Viva Medical passionately vows to
+            provide quality healthcare services to a broad spectrum of patients
+            within our expertise, experience and service skills.
+          </p>
+          <p
+            class="text-base lg:text-lg text-theme-text-secondary leading-relaxed"
+          >
+            Our compassionate, dedicated services are provided with dignity and
+            respect, available to individuals of all ages regardless of race,
+            color, sex, national origin, religion, age or disability.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section class="section bg-gradient-to-b from-theme-primary-lighter/20 via-theme-primary-lighter/10 to-theme-surface">
       <div class="container">
