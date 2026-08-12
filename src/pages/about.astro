@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import aboutHeroImage from "../assets/graphics/illustrated-graphics-07.png";
+import Button from "../components/Button.astro";
+import heroServicesImage from "../assets/backgrounds/background-graphics-02.png";
 import PageHero from "../components/PageHero.astro";
 import CallToActionSection from "../components/CallToActionSection.astro";
 import founderImage from "../assets/icons/founder.png";
@@ -82,12 +84,29 @@ import Icon from "../components/Icon.astro";
       </div> 
     </section>
 
-    <CallToActionSection
-      heading="Partner With Our Experienced Team"
-      subheading="Discover how our innovation and dedication to excellence can benefit your healthcare journey. We're here to provide compassionate, professional care when you need it most."
-      primaryButtonText="Contact Our Team"
-      primaryButtonLink="/contact"
-    />
+	  <!-- CTA Section -->
+	  <section class="relative py-20 lg:py-28 overflow-hidden">
+	  	<div class="absolute inset-0">
+	  		<Image
+	  			src={heroServicesImage}
+	  			alt="Healthcare environment"
+	  			class="w-full h-full object-cover"
+	  			loading="lazy"
+	  		/>
+	  		<div class="absolute inset-0 bg-theme-primary-darker/90"></div>
+	  	</div>
+	  	<div class="relative container">
+	  		<div class="max-w-2xl mx-auto text-center text-white">
+	  			<h2 class="mb-6">Ready to get started?</h2>
+	  			<p class="text-lg mb-10 text-white/80 font-primary">
+	  				Discover how our innovation and dedication to excellence can benefit your healthcare journey. We're here to provide compassionate, professional care when you need it most..
+	  			</p>
+	  			<Button variant="white" href="/contact">
+	  				Contact Us
+	  			</Button>
+	  		</div>
+	  	</div>
+	  </section>
 </Layout>
 
 <script>
