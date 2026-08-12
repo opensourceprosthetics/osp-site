@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Layout.astro";
+import aboutHeroImage from "../assets/graphics/illustrated-graphics-07.png";
+import Button from "../components/Button.astro";
+import heroServicesImage from "../assets/backgrounds/background-graphics-02.png";
+import PageHero from "../components/PageHero.astro";
+import CallToActionSection from "../components/CallToActionSection.astro";
+import founderImage from "../assets/icons/founder.png";
+import engineerImage from "../assets/icons/engineer.png";
+import prosthetistImage from "../assets/icons/prosthetist.png";
+import { Image } from "astro:assets";
+import Heading from "../components/Heading.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<Layout
+  title="About Us"
+  description=""
+>
+  <PageHero
+      title="WHY WE DO WHAT WE DO"
+      description=""
+      image={aboutHeroImage}
+    />
+
+      <!-- Mission Statement -->
+    <section
+      class="section bg-gradient-to-b from-theme-surface to-theme-surface-muted">
+      <div class="container">
+        <div class="narrow mx-auto text-center space-y-6">
+          <Heading level="h2" align="center"> Our Mission </Heading>
+          <p class="text-lg lg:text-xl text-theme-text-secondary leading-relaxed">
+            Provide free or ultra-low-cost, functional upper-limb assistive devices to underserved populations in South Africa and beyond through distributed 3D printing and clinical partnerships.
+            Our goal is to help those who were born missing their fingers and hands or who have lost them due to war, natural disaster, illness or accidents.
+          </p>
+          <p class="text-base lg:text-lg text-theme-text-secondary leading-relaxed">
+            Our compassionate, dedicated services are provided with dignity and
+            respect, available to individuals of all ages regardless of race,
+            color, sex, national origin, religion, age or disability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-gradient-to-b from-theme-primary-lighter/20 via-theme-primary-lighter/10 to-theme-surface">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-theme-text-primary mb-4">Meet Our Team</h2>
+          <p class="text-lg text-theme-text-secondary max-w-3xl mx-auto">
+            Dedicated professionals committed to delivering exceptional
+            healthcare services
+          </p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-1 place-items-center gap-8 lg:gap-12">
+            {/* Engineer */}
+          <div class="w-96">
+            <div class="bg-theme-surface rounded-2xl overflow-hidden transition-all duration-300">
+              <div class="relative h-80 lg:h-96 overflow-hidden">
+                <Image
+                  src={engineerImage}
+                  alt="engineer"
+                  class="w-full h-full object-cover"
+                  width={600}
+                  height={400}
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                </div>
+              </div>
+              <div class="text-center p-8 lg:p-10">
+                <h2 class="text-2xl lg:text-3xl font-bold mb-2 text-theme-text-primary">
+                  Daniel Beukes
+                </h2>
+                <p class="text-base text-theme-primary font-semibold mb-6">
+                  Founder & Engineer
+                </p>
+                <div
+                  id="davidText"
+                  class="text-theme-text-secondary text-base lg:text-lg leading-relaxed overflow-hidden transition-all duration-300 max-h-[200px]">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+	  <!-- CTA Section -->
+	  <section class="relative py-20 lg:py-28 overflow-hidden">
+	  	<div class="absolute inset-0">
+	  		<Image
+	  			src={heroServicesImage}
+	  			alt="Healthcare environment"
+	  			class="w-full h-full object-cover"
+	  			loading="lazy"
+	  		/>
+	  		<div class="absolute inset-0 bg-theme-primary-darker/90"></div>
+	  	</div>
+	  	<div class="relative container">
+	  		<div class="max-w-2xl mx-auto text-center text-white">
+	  			<h2 class="mb-6">Ready to get started?</h2>
+	  			<p class="text-lg mb-10 text-white/80 font-primary">
+	  				Discover how our innovation and dedication to excellence can benefit your healthcare journey. We're here to provide compassionate, professional care when you need it most..
+	  			</p>
+	  			<Button variant="white" href="/contact">
+	  				Contact Us
+	  			</Button>
+	  		</div>
+	  	</div>
+	  </section>
+</Layout>
+
+<script>
+  function initToggleButtons() {
+    document.querySelectorAll(".toggle-btn").forEach((button) => {
+      const btn = button as HTMLButtonElement;
+      
+      // Prevent duplicate event listeners
+      if (btn.dataset.bound === "true") return;
+      btn.dataset.bound = "true";
+
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        if (!targetId) return;
+        const textContainer = document.getElementById(targetId);
+        if (!textContainer) return;
+
+        const buttonText = btn.querySelector("span");
+        const buttonIcon = btn.querySelector("svg");
+        const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+        if (isExpanded) {
+          textContainer.classList.remove("max-h-full");
+          textContainer.classList.add("max-h-[200px]");
+          if (buttonText) buttonText.textContent = "Read more";
+          if (buttonIcon) buttonIcon.style.transform = "rotate(0deg)";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          textContainer.classList.remove("max-h-[200px]");
+          textContainer.classList.add("max-h-full");
+          if (buttonText) buttonText.textContent = "Read less";
+          if (buttonIcon) buttonIcon.style.transform = "rotate(180deg)";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+
+  // Astro best practice with ClientRouter: re-run on astro:page-load
+  document.addEventListener("astro:page-load", initToggleButtons);
+</script>

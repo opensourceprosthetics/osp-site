@@ -1,0 +1,27 @@
+{
+  "brand": {
+    "name": "Open Source Prosthetics",
+    "logo": "logo"
+  },
+  "contact": {
+    "addressLine1": "Midrand",
+    "addressLine2": "Johannesburg, South Africa, 1685",
+    "email": "mend@opensourceprosthetics.org"
+  },
+  "links": [
+    {
+      "label": "Home",
+      "href": "/",
+      "icon": "home"
+    },
+    {
+      "label": "About Us",
+      "href": "/about",
+      "icon": "info"
+    }
+  ],
+  "cta": {
+    "label": "Contact Us",
+    "href": "/contact"
+  }
+}
