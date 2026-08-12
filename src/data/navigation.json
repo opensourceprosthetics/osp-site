@@ -6,7 +6,6 @@
   "contact": {
     "addressLine1": "Midrand",
     "addressLine2": "Johannesburg, South Africa, 1685",
-    "phone": "+27 XXX XXX XXXX",
     "email": "mend@opensourceprosthetics.org"
   },
   "links": [
@@ -19,16 +18,6 @@
       "label": "About Us",
       "href": "/about",
       "icon": "info"
-    },
-    {
-      "label": "Services",
-      "href": "/services",
-      "icon": "clipboard"
-    },
-    {
-      "label": "Volunteer",
-      "href": "/volunteers",
-      "icon": "heart"
     }
   ],
   "cta": {
