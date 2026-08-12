@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import contactImage from "../assets/graphics/illustrated-graphics-06.png";
+import ContactForm from '../components/ContactForm.astro'
+import nav from "../data/navigation.json";
+---
+
+<Layout
+  title="Contact Us - Get in Touch | Viva Medical"
+  description="Contact Viva Medical for professional healthcare services. Reach our team by phone or visit our Springfield office. Monday-Saturday service."
+>
+  <PageHero
+    title="CONTACT US"
+    description="We're here to help you navigate your healthcare needs with ease. Whether you have questions, need support, or want to discuss our services, our team is ready to listen and assist you every step of the way."
+    image={contactImage}
+  />
+
+  <section
+    class="section bg-gradient-to-b from-theme-surface-muted to-theme-surface"
+    id="contact"
+  >
+    <div class="container">
+      <div class="flex items-stretch justify-center">
+        <div class="grid md:grid-cols-2">
+          <div class="h-full mt-3 mb-12 pr-6">
+            <p class="mt-3 mb-12 text-lg text-theme-text-primary">
+              <!-- Changed text color to black -->
+              We're committed to providing exceptional healthcare services and support.
+              Our team is here to help you navigate your healthcare needs with compassion
+              and professionalism. Contact us today to learn more about our services.
+            </p>
+            <ul class="mb-6 md:mb-0">
+              <li class="flex">
+                <div class="flex h-10 w-10 items-center justify-center">
+                  <svg
+                    class="w-6 h-6 text-theme-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div class="ml-4 mb-4">
+                  <h3
+                    class="mb-2 text-lg font-medium leading-6 text-theme-text-primary"
+                  >
+                    Our Address
+                  </h3>
+                  <p class="text-theme-text-primary">
+                    <!-- Changed text color to black -->
+                    {nav.contact.addressLine1}
+                  </p>
+                  <p class="text-theme-text-primary">
+                    <!-- Changed text color to black -->
+                    {nav.contact.addressLine2}
+                  </p>
+                </div>
+              </li>
+              <li class="flex">
+                <div class="flex h-10 w-10 items-center justify-center">
+                  <svg
+                    class="w-6 h-6 text-theme-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                    ></path>
+                    <path
+                      d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-4 mb-4">
+                  <h3
+                    class="mb-2 text-lg font-medium leading-6 text-theme-text-primary"
+                  >
+                    Contact
+                  </h3>
+                  <p class="text-theme-text-primary">
+                    <!-- Changed text color to black -->
+                    Email: {nav.contact.email}
+                  </p>
+                </div>
+              </li>
+              <li class="flex">
+                <div class="flex h-10 w-10 items-center justify-center">
+                  <svg
+                    class="w-6 h-6 text-theme-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div class="ml-4 mb-4">
+                  <h3
+                    class="mb-2 text-lg font-medium leading-6 text-theme-text-primary"
+                  >
+                    Working hours
+                  </h3>
+                  <p class="text-theme-text-primary">
+                    <!-- Changed text color to black -->
+                    Monday - Friday: 08:00 - 18:00
+                  </p>
+                  <p class="text-theme-text-primary">
+                    <!-- Changed text color to black -->
+                    Saturday: 09:00 - 15:00
+                  </p>
+                  <p class="text-theme-text-primary">
+                    <!-- Changed text color to black -->
+                    Sunday: Emergency services only
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1>Get In Touch</h1>
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container">
+      <div class="block w-full shrink-0 grow-0 basis-auto lg:flex">
+        <div class="h-[400px] w-full rounded-2xl overflow-hidden shadow-xl">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d229527.83695399118!2d27.9292943!3d-25.988614!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571fd4965198b%3A0x87b2105c1c8bfe22!2sMidrand%2C%20Zuid-Afrika!5e0!3m2!1snl!2snl!4v1784724147102!5m2!1snl!2snl" 
+            class="left-0 top-0 h-full w-full"
+            style="border: 0;"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+h1 {
+  text-align: center;
+  margin: 35px 0 20px 0 !important;
+}
+</style>
