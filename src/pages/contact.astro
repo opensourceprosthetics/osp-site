@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import PageHero from "../components/PageHero.astro";
 import contactImage from "../assets/graphics/illustrated-graphics-06.png";
+import ContactForm from '../components/ContactForm.astro'
 import nav from "../data/navigation.json";
 ---
 
@@ -121,24 +122,9 @@ import nav from "../data/navigation.json";
               </li>
             </ul>
           </div>
-          <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10 h-full border border-gray-100 hover:shadow-2xl transition-shadow duration-300" id="form"> 
-             <h1>Contact Us</h1>
-              <form target="_blank" action="https://formsubmit.co/kbo2gfo2@anonaddy.me" method="POST">
-                <div class="form-group">
-                  <div class="form-row">
-                    <div class="col">
-                      <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                    </div>
-                    <div class="col">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-              </form>
+          <div>
+            <h1>Get In Touch</h1>
+            <ContactForm />
           </div>
         </div>
       </div>
@@ -159,7 +145,6 @@ import nav from "../data/navigation.json";
     </div>
   </section>
 </Layout>
-
 
 <style>
 h1 {
