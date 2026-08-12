@@ -23,8 +23,7 @@ import Icon from "../components/Icon.astro";
 
       <!-- Mission Statement -->
     <section
-      class="section bg-gradient-to-b from-theme-surface to-theme-surface-muted"
-    >
+      class="section bg-gradient-to-b from-theme-surface to-theme-surface-muted">
       <div class="container">
         <div class="narrow mx-auto text-center space-y-6">
           <Heading level="h2" align="center"> Our Mission </Heading>
@@ -44,22 +43,20 @@ import Icon from "../components/Icon.astro";
     <section class="section bg-gradient-to-b from-theme-primary-lighter/20 via-theme-primary-lighter/10 to-theme-surface">
       <div class="container">
         <div class="text-center mb-16">
-          <h2 class="text-3xl lg:text-4xl font-bold text-theme-text-primary mb-4">
-            Meet Our Team
-          </h2>
+          <h2 class="text-3xl lg:text-4xl font-bold text-theme-text-primary mb-4">Meet Our Team</h2>
           <p class="text-lg text-theme-text-secondary max-w-3xl mx-auto">
             Dedicated professionals committed to delivering exceptional
             healthcare services
           </p>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mx-auto">
-          {/* Founder 1 */}
-          <div class="w-full">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Engineer */}
+          <div class="w-96">
             <div class="bg-theme-surface rounded-2xl overflow-hidden transition-all duration-300">
               <div class="relative h-80 lg:h-96 overflow-hidden">
                 <Image
-                  src={founderImage}
-                  alt="David Thompson"
+                  src={engineerImage}
+                  alt="engineer"
                   class="w-full h-full object-cover"
                   width={600}
                   height={400}
@@ -72,114 +69,17 @@ import Icon from "../components/Icon.astro";
                   Daniel Beukes
                 </h2>
                 <p class="text-base text-theme-primary font-semibold mb-6">
-                  Founder & Director
+                  Founder & Engineer
                 </p>
                 <div
                   id="davidText"
                   class="text-theme-text-secondary text-base lg:text-lg leading-relaxed overflow-hidden transition-all duration-300 max-h-[200px]">
                 </div>
-                <button
-                  class="toggle-btn mt-4 inline-flex items-center text-theme-primary hover:text-theme-primary-dark font-semibold transition-colors group"
-                  data-target="davidText"
-                  aria-expanded="false"
-                >
-                  <span>Read more</span>
-                  <Icon
-                    name="chevron-down"
-                    size="sm"
-                    class="ml-2 group-hover:translate-y-0.5 transition-transform duration-300"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-            {/* Founder 1 */}
-          <div class="w-full">
-            <div class="bg-theme-surface rounded-2xl overflow-hidden transition-all duration-300">
-              <div class="relative h-80 lg:h-96 overflow-hidden">
-                <Image
-                  src={engineerImage}
-                  alt="David Thompson"
-                  class="w-full h-full object-cover"
-                  width={600}
-                  height={400}
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
-                </div>
-              </div>
-              <div class="p-8 lg:p-10">
-                <h2 class="text-2xl lg:text-3xl font-bold mb-2 text-theme-text-primary">
-                  Engineer
-                </h2>
-                <p class="text-base text-theme-primary font-semibold mb-6">
-                  Engineering & Design
-                </p>
-                <div
-                  id="davidText"
-                  class="text-theme-text-secondary text-base lg:text-lg leading-relaxed overflow-hidden transition-all duration-300 max-h-[200px]">
-                </div>
-                <button
-                  class="toggle-btn mt-4 inline-flex items-center text-theme-primary hover:text-theme-primary-dark font-semibold transition-colors group"
-                  data-target="davidText"
-                  aria-expanded="false"
-                >
-                  <span>Read more</span>
-                  <Icon
-                    name="chevron-down"
-                    size="sm"
-                    class="ml-2 group-hover:translate-y-0.5 transition-transform duration-300"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Founder 2 */}
-          <div class="w-full">
-            <div class="bg-theme-surface rounded-2xl overflow-hidden transition-all duration-300">
-              <div class="relative h-80 lg:h-96 overflow-hidden">
-                <Image
-                  src={prosthetistImage}
-                  alt="Jennifer Martinez"
-                  class="w-full h-full object-cover"
-                  width={600}
-                  height={400}
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
-                </div>
-              </div>
-              <div class="p-8 lg:p-10">
-                <h2
-                  class="text-2xl lg:text-3xl font-bold mb-2 text-theme-text-primary">
-                  Prothetist
-                </h2>
-                <p class="text-base text-theme-primary font-semibold mb-6">
-                  Medical & Fitting
-                </p>
-                <div
-                  id="jenniferText"
-                  class="text-theme-text-secondary text-base lg:text-lg leading-relaxed overflow-hidden transition-all duration-300 max-h-[200px]">
-                  
-          </div>        
-                <button
-                  class="toggle-btn mt-4 inline-flex items-center text-theme-primary hover:text-theme-primary-dark font-semibold transition-colors group"
-                  data-target="jenniferText"
-                  aria-expanded="false"
-                >
-                  <span>Read more</span>
-                  <Icon
-                    name="chevron-down"
-                    size="sm"
-                    class="ml-2 group-hover:translate-y-0.5 transition-transform duration-300"
-                  />
-                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
+      </div> 
     </section>
 
     <CallToActionSection
