@@ -4,7 +4,6 @@ import PageHero from "../components/PageHero.astro";
 import contactImage from "../assets/graphics/illustrated-graphics-06.png";
 import ContactForm from '../components/ContactForm.astro'
 import nav from "../data/navigation.json";
-import Button from "../components/Button.astro";
 ---
 
 <Layout
@@ -60,34 +59,7 @@ import Button from "../components/Button.astro";
                     {nav.contact.addressLine2}
                   </p>
                 </div>
-              </li>
-              <li class="flex">
-                <div class="flex h-10 w-10 items-center justify-center">
-                  <svg
-                    class="w-6 h-6 text-theme-primary"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
-                    ></path>
-                    <path
-                      d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="ml-4 mb-4">
-                  <h3
-                    class="mb-2 text-lg font-medium leading-6 text-theme-text-primary"
-                  >
-                    Contact
-                  </h3>
-                  <p class="text-theme-text-primary">
-                    <!-- Changed text color to black -->
-                    Email: {nav.contact.email}
-                  </p>
-                </div>
-              </li>
+              </li>>
               <li class="flex">
                 <div class="flex h-10 w-10 items-center justify-center">
                   <svg
