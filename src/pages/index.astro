@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import homeheroImage from "../assets/backgrounds/background-graphics-05.webp";
-import professionalCareImage from "../assets/graphics/illustrated-graphics-08.png";
-import heroServicesImage from "../assets/backgrounds/background-graphics-04.png";
+import aboutheroImage from "../assets/graphics/illustrated-graphics-08.png";
+import servicesheroImage from "../assets/backgrounds/background-graphics-04.png";
 import ServicesIntroSection from "../components/ServicesIntroSection.astro";
 import Button from "../components/Button.astro";
 import Icon from "../components/Icon.astro";
@@ -43,8 +43,7 @@ const serviceCards: ServiceCard[] = [
 	<section
 		class="relative min-h-[70vh] md:min-h-screen lg:min-h-[50vh] flex items-center py-16 md:py-0"
 		role="banner"
-		aria-label="Hero Section"
-	>
+		aria-label="Hero Section">
 		<div class="absolute inset-0 z-0">
 			<Image
 				src={homeheroImage}
@@ -68,16 +67,11 @@ const serviceCards: ServiceCard[] = [
 					Open Designs. Open Solutions. Open Source.
 				</p>
 				<div class="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
-					<Button
-						variant="white"
-						size="lg"
-						href="/contact"
-						class="hover:shadow-xl hover:scale-105"
-					>
+					<Button variant="white" size="lg" href="/contact" class="hover:shadow-xl hover:scale-105">
 						Get Started
 					</Button>
 					<Button variant="primary" href="https://github.com/opensourceprosthetics">
-						GitHub
+						GitHub Repo
 					</Button>
 				</div>
 			</div>
@@ -124,8 +118,8 @@ const serviceCards: ServiceCard[] = [
 					<div class="relative">
 						<div class="rounded-2xl overflow-hidden shadow-xl">
 							<Image
-								src={professionalCareImage}
-								alt="Healthcare provider with patient"
+								src={aboutheroImage}
+								alt="org process"
 								class="w-full h-auto"
 								loading="lazy"
 							/>
@@ -147,7 +141,7 @@ const serviceCards: ServiceCard[] = [
 	<section class="relative py-20 lg:py-28 overflow-hidden">
 		<div class="absolute inset-0">
 			<Image
-				src={heroServicesImage}
+				src={servicesheroImage}
 				alt="Healthcare environment"
 				class="w-full h-full object-cover"
 				loading="lazy"
