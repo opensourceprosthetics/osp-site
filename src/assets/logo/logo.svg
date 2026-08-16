@@ -9,35 +9,8 @@
    enable-background="new 0 0 1024 512"
    xml:space="preserve"
    height="531.18115"
-   sodipodi:docname="favicon.svg"
-   inkscape:export-filename="logo.svg"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
-   inkscape:export-batch-name=""
-   inkscape:export-batch-path="/home/d33b33/Design/development/opensourceprothestics"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-   id="namedview1"
-   pagecolor="#505050"
-   bordercolor="#eeeeee"
-   borderopacity="1"
-   inkscape:showpageshadow="0"
-   inkscape:pageopacity="0"
-   inkscape:pagecheckerboard="0"
-   inkscape:deskcolor="#505050"
-   showgrid="false"
-   inkscape:zoom="1.9955527"
-   inkscape:cx="265.34002"
-   inkscape:cy="265.59058"
-   inkscape:window-width="2000"
-   inkscape:window-height="1298"
-   inkscape:window-x="0"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
-   inkscape:current-layer="Layer_1" /><defs
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
    id="defs57" />
 
 
@@ -119,8 +92,7 @@
 <g
    id="g132"
    transform="matrix(1.4063115,0,0,1.4063115,-793.04392,-95.89553)"
-   style="display:inline"
-   inkscape:label="logo"><g
+   style="display:inline"><g
      id="g120"
      style="display:inline"><g
        id="g133"
