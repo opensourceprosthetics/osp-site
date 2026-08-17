@@ -4,6 +4,7 @@ import { ClientRouter } from "astro:transitions";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import ThemeSwitcher from "../components/ThemeSwitcher.astro";
+import { Umami } from 'astro-analytics';
 import "../styles/tailwind.css";
 import nav from "../data/navigation.json";
 
@@ -33,6 +34,13 @@ const defaultDescription =
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title ?? defaultTitle} />
 		<meta property="og:description" content={description ?? defaultDescription} />
+
+		<!-- Umami API -->
+		<!--<Umami 
+			id="f39ab87b-5440-4e51-95c6-69a9174fce9c" 
+			src="https://cloud.umami.is/script.js" 
+		/> -->
+		<script defer src="https://cloud.umami.is/script.js" data-website-id="f39ab87b-5440-4e51-95c6-69a9174fce9c"></script>
 
 		<!-- Theme Color -->
 		<meta name="theme-color" content="#1a4d3e" />
