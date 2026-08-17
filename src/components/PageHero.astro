@@ -32,7 +32,7 @@ const { title, description, image, priority = true } = Astro.props;
           <Image
             src={image}
             alt={title}
-            class="w-full h-[350px] lg:h-[450px] object-cover rounded-2xl"
+            class="w-full h-[350px] lg:h-[550px] object-cover rounded-2xl"
             loading={priority ? "eager" : "lazy"}
             fetchpriority={priority ? "high" : "auto"}
           />
