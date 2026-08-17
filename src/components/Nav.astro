@@ -3,7 +3,7 @@
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import Icon from "./Icon.astro";
 import nav from "../data/navigation.json";
-import Logo from "./Logo.astro";
+import LogoDir from "../assets/logo/logo.svg";
 
 const normalizePath = (path: string) =>
   path === "/" ? "/" : path.replace(/\/$/, "");
@@ -25,7 +25,10 @@ const isCurrentPage = (href: string) => {
         <a href="/" class="shrink-0 flex items-center group relative z-10">
           <div class="text-2xl lg:text-3xl font-display font-bold text-theme-primary transition-transform duration-300 group-hover:scale-[1.02] whitespace-nowrap">
             <!--{nav.brand.name}-->
-            <Logo />
+            <LogoDir 
+              height="96"
+              width="96:"
+            />
           </div>
         </a>
         <!-- Desktop Navigation -->
