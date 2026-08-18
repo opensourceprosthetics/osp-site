@@ -5,7 +5,7 @@ import Button from "../components/Button.astro";
 import heroServicesImage from "../assets/backgrounds/background-graphics-04.png";
 import PageHero from "../components/PageHero.astro";
 import engineerImage from "../assets/icons/engineer.png";
-import { Image } from "astro:assets";
+//import { Image } from "astro:assets";
 import Heading from "../components/Heading.astro";
 ---
 
@@ -59,8 +59,8 @@ import Heading from "../components/Heading.astro";
           <div class="w-96">
             <div class="bg-theme-surface rounded-2xl overflow-hidden transition-all duration-300">
               <div class="relative h-80 lg:h-96 overflow-hidden">
-                <Image
-                  src={engineerImage}
+                <img
+                  src={engineerImage.src}
                   alt="engineer"
                   class="w-full h-full object-cover"
                   width={600}
@@ -76,9 +76,7 @@ import Heading from "../components/Heading.astro";
                 <p class="text-base text-theme-primary font-semibold mb-6">
                   Founder & Engineer
                 </p>
-                <div
-                  id="davidText"
-                  class="text-theme-text-secondary text-base lg:text-lg leading-relaxed overflow-hidden transition-all duration-300 max-h-[200px]">
+                <div id="davidText" class="text-theme-text-secondary text-base lg:text-lg leading-relaxed overflow-hidden transition-all duration-300 max-h-[200px]">
                 </div>
               </div>
             </div>
@@ -90,8 +88,8 @@ import Heading from "../components/Heading.astro";
 	  <!-- CTA Section -->
 	  <section class="relative py-20 lg:py-28 overflow-hidden">
 	  	<div class="absolute inset-0">
-	  		<Image
-	  			src={heroServicesImage}
+	  		<img
+	  			src={heroServicesImage.src}
 	  			alt="Healthcare environment"
 	  			class="w-full h-full object-cover"
 	  			loading="lazy"
