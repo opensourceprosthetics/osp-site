@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+//import { Image } from "astro:assets";
 import Heading from "./Heading.astro";
 
 interface Props {
@@ -29,8 +29,8 @@ const { title, description, image, priority = true } = Astro.props;
       <!-- Image container -->
       <div class="w-full md:w-1/2 flex items-center justify-center">
         <div class="relative w-full">
-          <Image
-            src={image}
+          <img
+            src={image.src}
             alt={title}
             class="w-full h-[350px] lg:h-[550px] object-cover rounded-2xl"
             loading={priority ? "eager" : "lazy"}

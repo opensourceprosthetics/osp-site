@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import homeheroImage from "../assets/backgrounds/background-graphics-05.webp";
 import aboutheroImage from "../assets/graphics/illustrated-graphics-08.png";
-import servicesheroImage from "../assets/backgrounds/background-graphics-04.png";
+import servicesheroImage from "../assets/backgrounds/poly-strip-1920x540.png";
 import Button from "../components/Button.astro";
 import Icon from "../components/Icon.astro";
 import Link from "../components/Link.astro";
@@ -47,8 +47,8 @@ const serviceCards: ServiceCard[] = [
 		role="banner"
 		aria-label="Hero Section">
 		<div class="absolute inset-0 z-0">
-			<Image
-				src={homeheroImage}
+			<img
+				src={homeheroImage.src}
 				alt="home hero"
 				class="w-full h-full object-cover object-top"
 				loading="eager"
@@ -122,8 +122,8 @@ const serviceCards: ServiceCard[] = [
 				<div class="order-1 lg:order-2">
 					<div class="relative">
 						<div class="rounded-2xl overflow-hidden shadow-xl">
-							<Image
-								src={aboutheroImage}
+							<img
+								src={aboutheroImage.src}
 								alt="org process"
 								class="w-full h-auto"
 								loading="lazy"
@@ -145,8 +145,8 @@ const serviceCards: ServiceCard[] = [
 	<!-- CTA Section -->
 	<section class="relative py-20 lg:py-28 overflow-hidden">
 		<div class="absolute inset-0">
-			<Image
-				src={servicesheroImage}
+			<img
+				src={servicesheroImage.src}
 				alt="Healthcare environment"
 				class="w-full h-full object-cover"
 				loading="lazy"
