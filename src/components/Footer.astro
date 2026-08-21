@@ -4,54 +4,54 @@ import nav from "../data/navigation.json";
 import LogoWDir from "../assets/logo/logo-white.svg";
 ---
 
-<footer class="bg-theme-primary-darker text-white py-8">
+<footer class="flex space-around bg-theme-primary-darker text-white py-8">
+  <!-- Coloume One -->
   <div class="container content flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
-    <!-- First Column - Logo and Navigation -->
-    <div class="flex flex-col items-center lg:items-start w-full lg:w-1/4">
-      <div class="text-2xl lg:text-3xl font-bold text-white mb-4">
-        <!--{nav.brand.name}-->
-        <LogoWDir 
-          height="72"
-          width="72"
-          height="72"
-        />
+    <div class="footer__list">
+      <div class="flex flex-col items-center lg:items-start w-full">
+        <LogoWDir height="72" width="72"/>
       </div>
-      <nav class="flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-2">
-        {
-          nav.links.map((link) => (
-            <a href={link.href} class="text-sm text-white hover:text-gray-300">
-              {link.label}
-            </a>
-          ))
-        }
-        <a href={nav.cta.href} class="text-sm text-white hover:text-gray-300">{nav.cta.label}</a>
-      </nav>
-    </div>
-
-    <!-- Middle Column - Contact Info -->
-    <div class="flex flex-col items-center lg:items-start w-full lg:w-1/3">
-      <div class="flex items-start w-full my-3">
-        <div class="w-8 text-center mt-1">
-          <Icon name="location" size="sm" class="text-gray-400 mx-auto" />
-        </div>
-        <p class="ml-3 text-sm">
-          {nav.contact.addressLine1}<br />{nav.contact.addressLine2}
-        </p>
-      </div>
-    </div>
-
-    <!-- Third Column - Description -->
-    <div class="flex flex-col items-center lg:items-start w-full lg:w-2/5">
-      <h3 class="text-lg font-semibold mb-3 text-center lg:text-left">
-        {nav.brand.name}
-      </h3>
-      <p class="text-sm text-center lg:text-left leading-relaxed max-w-md lg:max-w-none">
-        3D Printed Prosthetics for the World.
-      </p>
     </div>
   </div>
-      <!-- Social Links -->
-  <div class="flex flex-col items-center lg:items-end w-full">
+
+  <!-- Coloume Two -->
+  <div>
+    <nav class="flex flex-wrap justify-center lg:justify-start gap-x-4 gap-y-2">
+      {
+        nav.links.map((link) => (
+          <a href={link.href} class="text-sm text-white hover:text-gray-300">
+            {link.label}
+          </a>
+        ))
+      }
+      <a href={nav.cta.href} class="text-sm text-white hover:text-gray-300">
+        {nav.cta.label}
+      </a>
+    </nav>
+  </div>
+
+  <!-- Coloume Three --> 
+  <div class="flex flex-col items-center lg:items-start w-full">
+    <h3 class="text-lg font-semibold mb-3 text-center lg:text-left">
+      {nav.brand.name}
+    </h3>
+    <p class="text-sm text-center lg:text-left leading-relaxed max-w-md lg:max-w-none">
+      3D Printed Prosthetics for the World.
+    </p>
+  </div>
+
+  <!-- Coloume Four -->
+  <div class="flex items-start w-full my-3">
+    <div class="w-8 text-center mt-1">
+      <Icon name="location" size="sm" class="text-gray-400 mx-auto" />
+    </div>
+    <p class="ml-3 text-sm">
+      {nav.contact.addressLine1}<br />{nav.contact.addressLine2}
+    </p>
+  </div>
+    
+  <!-- Social Links -->
+  <div class="flex flex-col items-center lg:items-end w-full">  
     <div class="social-links flex items-start w-full my-3">
 	  	<a href="https://mastodon.social/@opensourceprosthetics" target="_blank">
 	  		<span class="sr-only">Follow Open Source Prosthetics on Mastodon</span>
@@ -89,11 +89,25 @@ import LogoWDir from "../assets/logo/logo-white.svg";
   </div>  
 </footer>
 <style>
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer__headline {
+    font-weight: bold;
+    font-family: 'Helvetica';
+  }
+  .footer__list {
+    font-family: 'Helvetica';
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .social-links {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	margin-top: 1em;
 	}
 	.social-links a {
 		text-decoration: none;
