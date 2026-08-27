@@ -2,7 +2,7 @@
 // src/layouts/Layout.astro
 import { ClientRouter } from "astro:transitions";
 import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";  
+import Footer from "../components/Footer.astro"; 
 import "../styles/tailwind.css";
 import nav from "../data/navigation.json";
 //import Umami from "../components/Umami.astro"
@@ -21,13 +21,6 @@ const defaultDescription = "Millions of people live without access to affordable
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- Required meta tags -->
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title ?? defaultTitle}</title>
-		<meta name="description" content={description ?? defaultDescription} />
-
 		<!-- Open Graph / Social Media -->
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title ?? defaultTitle} />
