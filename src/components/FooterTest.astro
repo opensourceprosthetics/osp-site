@@ -1,0 +1,78 @@
+---
+import Icon from "./Icon.astro";
+import nav from "../data/navigation.json";
+import Logo from "../assets/logo/logo-white.svg";
+
+const columns = [
+	{
+		heading: 'Services',
+		links: [
+			{ href: '/#Volunteer', label: 'Volunteer' },
+			{ href: '/#Donate', label: 'Donate' },
+		],
+	},
+	{
+		heading: 'Company',
+		links: [
+			{ href: '/about', label: 'About' },
+		],
+	},
+	{
+		heading: 'Socials',
+		links: [
+			{ href: 'https://', label: 'Mastodon' },
+			{ href: 'https://github.com/opensourceprosthetics', label: 'GitHub' },
+		],
+	},
+];
+---
+
+<footer class="flex space-around bg-theme-primary-darker text-white py-8">
+  	<div class="mx-auto grid max-w-[1200px] gap-8 px-8 pt-[60px] pb-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+		<div>
+			<Logo 
+	    		height="64px"
+				width="64px"
+			/>
+			<p class="mt-4 max-w-[260px] text-sm leading-relaxed">
+				Open Designs. Open Solutions. Open Source.
+			</p>
+		</div>
+		{
+			columns.map((col) => (
+				<div>
+					<div class="mb-3.5 text-sm font-bold text-cloud">
+						{col.heading}
+					</div>
+					<div class="flex flex-col gap-2.5 text-sm">
+						{col.links.map((link) => (
+							<a href={link.href} class="text-sky-mist hover:text-orange">
+								{link.label}
+							</a>
+						))}
+					</div>
+				</div>
+			))
+		}
+	</div>
+	<!--<div class="border-t border-white/10">
+		<div class="mx-auto flex max-w-[1200px] flex-wrap justify-between gap-3 px-8 py-5 text-[13px] text-slate-500">
+			<span>
+				© 2026 Kepler. All rights reserved.
+			</span>
+			<span>
+				Made with Astro ✦ · 
+				<a
+					href="https://almanac.p4ni.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="hover:text-orange">
+					Almanac — directory theme by the same author
+				</a>
+			</span>
+		</div>
+	</div> -->
+</footer>
+<style>
+
+</style>

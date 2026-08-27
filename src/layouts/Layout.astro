@@ -2,7 +2,8 @@
 // src/layouts/Layout.astro
 import { ClientRouter } from "astro:transitions";
 import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";  
+//import Footer from "../components/Footer.astro";
+import FooterTest from "../components/FooterTest.astro";  
 import "../styles/tailwind.css";
 import nav from "../data/navigation.json";
 //import Umami from "../components/Umami.astro"
@@ -21,13 +22,6 @@ const defaultDescription = "Millions of people live without access to affordable
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- Required meta tags -->
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title ?? defaultTitle}</title>
-		<meta name="description" content={description ?? defaultDescription} />
-
 		<!-- Open Graph / Social Media -->
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title ?? defaultTitle} />
@@ -49,7 +43,7 @@ const defaultDescription = "Millions of people live without access to affordable
 			<!-- The page-specific content will be injected here -->
 			<slot />
 		</main>
-		<Footer />
+		<FooterTest />
 
 		<!-- Navigation Progress Bar -->
 		<div id="nav-progress" class="fixed top-0 left-0 h-1 bg-theme-primary z-[100] transition-all duration-300 ease-out" style="width: 0%; opacity: 0;">
