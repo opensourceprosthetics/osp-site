@@ -20,9 +20,10 @@ import Heading from "../components/Heading.astro";
     />
 
       <!-- Mission Statement -->
-    <section class="section bg-gradient-to-b from-theme-surface to-theme-surface-muted">
+    <section
+      class="section bg-gradient-to-b from-theme-surface to-theme-surface-muted">
       <div class="container">
-        <div class="narrow mx-auto text-center space-y-8 spacy">
+        <div class="narrow mx-auto text-center space-y-6">
           <Heading level="h2" align="center"> Our Mission </Heading>
           <p class="text-lg lg:text-xl text-theme-text-secondary leading-relaxed">
             Provide free or ultra-low-cost, functional upper-limb assistive devices to underserved populations in South Africa and beyond through distributed 3D printing and clinical partnerships.
@@ -45,7 +46,7 @@ import Heading from "../components/Heading.astro";
       </div>
     </section>
 
-    <!-- <section class="section bg-gradient-to-b from-theme-primary-lighter/20 via-theme-primary-lighter/10 to-theme-surface">
+    <section class="section bg-gradient-to-b from-theme-primary-lighter/20 via-theme-primary-lighter/10 to-theme-surface">
       <div class="container">
         <div class="text-center mb-16">
           <h2 class="text-3xl lg:text-4xl font-bold text-theme-text-primary mb-4">Meet Our Team</h2>
@@ -82,12 +83,17 @@ import Heading from "../components/Heading.astro";
           </div>
         </div>
       </div> 
-    </section> -->
+    </section>
 
 	  <!-- CTA Section -->
 	  <section class="relative py-20 lg:py-28 overflow-hidden">
 	  	<div class="absolute inset-0">
-	  		<img src={heroServicesImage.src} alt="Healthcare environment" class="w-full h-full object-cover" loading="lazy"/>
+	  		<img
+	  			src={heroServicesImage.src}
+	  			alt="Healthcare environment"
+	  			class="w-full h-full object-cover"
+	  			loading="lazy"
+	  		/>
 	  		<div class="absolute inset-0 bg-theme-primary-darker/90"></div>
 	  	</div>
 	  	<div class="relative container">
@@ -103,13 +109,6 @@ import Heading from "../components/Heading.astro";
 	  	</div>
 	  </section>
 </Layout>
-
-<style>
-  .spacy {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-</style>
 
 <script>
   function initToggleButtons() {
