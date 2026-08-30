@@ -4,7 +4,7 @@ import Button from "../components/Button.astro";
 ---
 
 <div class="form-wrapper">
-  <form id="contact-form">
+  <form id="contact-form" action="https://formgrid.dev/api/f/ifo3u0za" method="POST">
 
     <!-- Honeypot spam protection -->
     <input
@@ -15,7 +15,9 @@ import Button from "../components/Button.astro";
     />
 
     <div class="field">
-      <label for="name">Your Name</label>
+	    <label for="name">
+		    Your Name
+	    </label>
       <input
         type="text"
         id="name"
@@ -26,7 +28,9 @@ import Button from "../components/Button.astro";
     </div>
 
     <div class="field">
-      <label for="email">Email Address</label>
+	    <label for="email">
+		    Email Address
+	    </label>
       <input
         type="email"
         id="email"
@@ -37,7 +41,9 @@ import Button from "../components/Button.astro";
     </div>
 
     <div class="field">
-      <label for="message">Message</label>
+	    <label for="message">
+		    Message
+	    </label>
       <textarea
         id="message"
         name="message"
